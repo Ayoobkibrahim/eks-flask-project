@@ -1,0 +1,19 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy-dev:
+    uses: ./.github/workflows/reusable-deploy.yml
+
+    with:
+      aws_region: us-east-1
+      ecr_repository: flask-app
+      eks_cluster: my-eks-cluster
+
+    secrets:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
