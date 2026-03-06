@@ -7,6 +7,7 @@ on:
 
 jobs:
   deploy-dev:
+    environment: dev
     uses: ./.github/workflows/reusable-deploy.yaml
 
     with:
