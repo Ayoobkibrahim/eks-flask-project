@@ -12,7 +12,7 @@ jobs:
 
     with:
       aws_region: ${{ vars.AWS_REGION }}
-      ecr_repository: ${{ vars.AWS_REGION }}
-      eks_cluster: ${{ vars.AWS_REGION }}
+      ecr_repository: ${{ vars.ECR_REPOSITORY }}
+      eks_cluster: ${{ vars.EKS_CLUSTER }}
 
     secrets: inherit
