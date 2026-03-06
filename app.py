@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return jsonify({"status": "ok", "message": "Hello From  EKS! CI/CD"})
+    return jsonify({"status": "ok", "message": "Hello From  EKS! to deploy flask app"})
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0",port=5000    )
